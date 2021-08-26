@@ -30,11 +30,6 @@
     margin: 0 auto;
   }
 
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
   h1 {
     color: #ff3e00;
     text-transform: uppercase;
