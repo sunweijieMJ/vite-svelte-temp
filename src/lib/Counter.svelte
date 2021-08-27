@@ -1,8 +1,9 @@
 <script lang="ts">
     let count: null = 0;
+
     const increment = () => {
         count += 1;
-    };
+    }
 </script>
 
 <button on:click={increment}>
