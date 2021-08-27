@@ -31,6 +31,9 @@ module.exports = {
             processor: 'svelte3/svelte3'
         }
     ],
+    settings: {
+        "svelte3/ignore-styles": () => true
+    },
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? ['error', { allow: ['warn', 'error'] }] : 'off', // 禁用 console
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off', // 禁用 debugger
