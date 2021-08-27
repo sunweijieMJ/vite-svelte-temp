@@ -9,13 +9,11 @@
   Clicks: {count}
 </button>
 <style lang="scss">
-    $color: #399;
-
     button {
         font-family: inherit;
         font-size: inherit;
         padding: 1em 2em;
-        color: $color;
+        color: #399;
         background-color: rgba(255, 62, 0, 0.1);
         border-radius: 2em;
         border: 2px solid rgba(255, 62, 0, 0);
@@ -23,12 +21,12 @@
         width: 200px;
         font-variant-numeric: tabular-nums;
         cursor: pointer;
-        &:focus {
-            border: 2px solid $color;
+        /* &:focus {
+            border: 2px solid #399;
         }
         &:active {
             background-color: rgba(255, 62, 0, 0.2);
-        }
+        } */
     }
 
 </style>
