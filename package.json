@@ -5,10 +5,13 @@
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
+        "prepare": "husky install",
         "lint": "eslint --ext .js,.ts,.jsx,.tsx,.vue,.svelte src",
         "check": "svelte-check --tsconfig ./tsconfig.json"
     },
     "devDependencies": {
+        "@commitlint/cli": "^13.1.0",
+        "@commitlint/config-conventional": "^13.1.0",
         "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
         "@tsconfig/svelte": "^2.0.1",
         "@types/node": "^16.7.2",
