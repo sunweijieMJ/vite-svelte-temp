@@ -1,11 +1,11 @@
 {
     "name": "vite-svelte-template",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
-        "lint": "eslint --ext .js,.ts,.jsx,.tsx,.vue,.svelte src",
+        "lint": "eslint src --ext .js,.ts,.jsx,.tsx,.vue,.svelte",
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "prepare": "husky install"
     },
@@ -30,7 +30,7 @@
         "svelte-check": "^2.1.0",
         "svelte-preprocess": "^4.7.2",
         "tslib": "^2.2.0",
-        "typescript": "^4.3.2",
+        "typescript": "^4.3.5",
         "vite": "^2.5.1",
         "vite-plugin-compression": "^0.3.5",
         "vite-plugin-style-import": "^1.2.1"
