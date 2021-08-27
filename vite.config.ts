@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import viteCompression from 'vite-plugin-compression';
+import sveltePreprocess from 'svelte-preprocess';
 import path from 'path';
 
 const port = 9000;
@@ -11,7 +12,9 @@ export default ({ mode }: { mode: string }): unknown => {
     process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
     return defineConfig({
         plugins: [
-            svelte(),
+            svelte({
+                preprocess: sveltePreprocess()
+            }),
             viteCompression({
                 verbose: true,
                 disable: false,
