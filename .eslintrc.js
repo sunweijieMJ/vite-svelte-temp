@@ -1,15 +1,16 @@
 module.exports = {
     root: true,
     env: {
-        node: true
+        node: true,
+        browser: true
     },
     globals: {
         process: true
     },
     extends: [
         'airbnb-base',
-        // 'plugin:prettier/recommended',
-        'plugin:vue/vue3-recommended'
+        // 'plugin:vue/vue3-recommended',
+        // 'plugin:react/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -21,28 +22,56 @@ module.exports = {
     },
     plugins: [
         '@typescript-eslint',
-        'prettier',
         'vue',
+        'react',
         'svelte3'
     ],
     overrides: [
+        {
+            files: ['**/*.ts', '**/*.tsx'],
+            rules: {
+                "import/prefer-default-export": "off",
+                "no-use-before-define": "off",
+                "@typescript-eslint/no-use-before-define": ["error"],
+                "import/extensions": [
+                    "error",
+                    "ignorePackages",
+                    {
+                        "js": "never",
+                        "jsx": "never",
+                        "ts": "never",
+                        "tsx": "never"
+                    }
+                ]
+            },
+        },
+        {
+            files: ['*.vue'],
+            rules: {
+                'vue/html-indent': ['off'],
+                'vue/max-attributes-per-line': ['off'],
+                'vue/singleline-html-element-content-newline': ['off'],
+            },
+        },
         {
             files: ['*.svelte'],
             processor: 'svelte3/svelte3'
         }
     ],
     settings: {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        },
         "svelte3/ignore-styles": () => true
     },
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? ['error', { allow: ['warn', 'error'] }] : 'off', // 禁用 console
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off', // 禁用 debugger
-        '@typescript-eslint/no-var-requires': 'off',
-        'import/no-extraneous-dependencies': 'off',
+        '@typescript-eslint/no-var-requires': 'off', // require 报错
+        'import/no-extraneous-dependencies': 'off', // 引入path报错
 
-        'vue/html-indent': ['off'],
-        'vue/max-attributes-per-line': ['off'],
-        'vue/singleline-html-element-content-newline': ['off'],
         /**
          * 代码中可能的错误或逻辑错误
          */
