@@ -5,7 +5,9 @@
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
-        "lint": "eslint src --ext .js,.ts,.jsx,.tsx,.vue,.svelte",
+        "lint": "npm run lint:script && npm run lint:style",
+        "lint:script": "eslint src --ext .js,.ts,.jsx,.tsx,.vue,.svelte",
+        "lint:style": "stylelint src .css,.scss,.less",
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "prepare": "husky install"
     },
