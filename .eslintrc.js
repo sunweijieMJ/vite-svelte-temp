@@ -68,7 +68,7 @@ module.exports = {
         "react": {
     //         "version": "detect" // 针对react项目开启
         },
-        "svelte3/ignore-styles": () => true
+        "svelte3/ignore-styles": () => true // 针对svelte文件忽略style标签的检测
     },
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? ['error', { allow: ['warn', 'error'] }] : 'off', // 禁用 console

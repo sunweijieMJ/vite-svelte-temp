@@ -41,7 +41,7 @@ export default ({ mode }: { mode: string }): unknown => {
             strictPort: true,
             https: false,
             proxy: {
-                '^/(masterdataDomain|taskDomain|userDomain|pim/admin|oms/admin)': {
+                '^/(userDomain|masterdataDomain|taskDomain)': {
                     target: 'http://dev.backendapi.aid.connext.net.cn/' // 开发
                 // target: 'http://test.backendapi.aid.connext.net.cn/' // 测试
                 }
@@ -65,6 +65,7 @@ export default ({ mode }: { mode: string }): unknown => {
                         chunkMap.set(/[\\/]node_modules[\\/]xlsx[\\/]xlsx.js/.test(id), 'xlsxIndex');
                         chunkMap.set(/[\\/]node_modules[\\/]xlsx[\\/](?!(xlsx.js))/.test(id), 'xlsx');
                         if (chunkMap.get(true)) return chunkMap.get(true);
+                        return null;
                     }
                 }
             }
