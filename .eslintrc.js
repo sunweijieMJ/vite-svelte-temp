@@ -22,8 +22,9 @@ module.exports = {
     },
     plugins: [
         '@typescript-eslint',
-        'vue',
-        'react',
+        'html',
+        // 'vue',
+        // 'react',
         'svelte3'
     ],
     overrides: [
@@ -64,6 +65,9 @@ module.exports = {
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
             }
         },
+        "react": {
+    //         "version": "detect" // 针对react项目开启
+        },
         "svelte3/ignore-styles": () => true
     },
     rules: {
