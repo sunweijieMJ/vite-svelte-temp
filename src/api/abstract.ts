@@ -12,10 +12,8 @@ import { i18n } from '@/plugin';
 // import { CustomToast } from '@/components/custom';
 
 // 环境变量
-const { env } = import.meta;
-
 class Abstract {
-    protected baseURL = env.VITE_BUILD_ENV ? window.env.VITE_BASEURL : env.VITE_BASEURL as string;
+    protected baseURL = import.meta.env.VITE_BUILD_ENV ? window.env.VITE_BASEURL : import.meta.env.VITE_BASEURL;
 
     protected headers = {
         ContentType: 'application/json;charset=UTF-8',

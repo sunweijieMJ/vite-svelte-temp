@@ -2,9 +2,9 @@
     "name": "vite-svelte-template",
     "version": "1.0.0",
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "serve": "vite preview",
+        "serve": "vite --mode",
+        "build": "vite build --mode",
+        "preview": "vite preview --port 8888",
         "lint": "npm run lint:script && npm run lint:style",
         "lint:script": "eslint src --ext .js,.ts,.jsx,.tsx,.vue,.svelte",
         "lint:style": "stylelint 'src/**/*.{css,scss,less,vue,svelte}'",

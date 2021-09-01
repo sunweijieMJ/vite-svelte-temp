@@ -1,3 +1,6 @@
+<script>
+    import { i18n } from '@/plugin';
+</script>
 <div class="not-found">
     <h2 class="logo">
         <svg class="icon" aria-hidden="true" width="60px" height="60px">
@@ -7,10 +10,10 @@
     <div class="container">
         <div class="box">
             <img class="img" src="/src/assets/image/404.png" alt="">
-            <h4 class="title"> Sorry~</h4>
-            <p class="desc">The page is having a rest</p>
+            <h4 class="title">{ i18n.t('base404.t1') }</h4>
+            <p class="desc">{ i18n.t('base404.t2') }</p>
             <a class="back" href="/">
-                <span class="text">返回首页</span>
+                <span class="text">{ i18n.t('base404.t3') }</span>
                 <i class="iconfont iconarrow_right"></i>
             </a>
         </div>
@@ -18,7 +21,7 @@
 </div>
 <style lang="scss" scoped>
     .not-found {
-        background: url('../assets/image/login_bg1.png') left top no-repeat;
+        background: url('/src/assets/image/login_bg1.png') left top no-repeat;
         background-color: #f6f7fb;
         display: flex;
         flex-direction: column;
@@ -32,7 +35,7 @@
         }
 
         .container {
-            background: url('../assets/image/login_bg2.png') right bottom no-repeat;
+            background: url('/src/assets/image/login_bg2.png') right bottom no-repeat;
             background-color: #fff;
             border-radius: 10px 0 0;
             flex: 1;
