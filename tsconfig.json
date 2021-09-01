@@ -17,7 +17,7 @@
             "svelte",
             "vite/client"
         ],
-        "baseUrl": ".",
+        "baseUrl": "./",
         "paths": {
             "@/*": [
                 "src/*"
