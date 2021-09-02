@@ -1,7 +1,7 @@
 <script>
     import { Router, Route } from 'svelte-routing';
-    import Layout from '@/layout/index.svelte';
     import Login from '@/views/Login.svelte';
+    import Layout from '@/layout/index.svelte';
     import NotFound from '@/views/404.svelte';
 
     export const url = '';
